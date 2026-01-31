@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css"/>
+    <title>Portfolio - Creative Web Developer</title>
+   
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <canvas id="canvas3d"></canvas>
+    
+    <!-- Robotic Dog -->
+    <div class="robotic-dog" id="roboticDog">
+        <div class="dog-body">
+            <div class="dog-head">
+                <div class="dog-antenna"></div>
+                <div class="dog-ear left"></div>
+                <div class="dog-ear right"></div>
+                <div class="dog-eyes">
+                    <div class="dog-eye"></div>
+                    <div class="dog-eye"></div>
+                </div>
+                <div class="dog-nose"></div>
+                <div class="dog-mouth"></div>
+            </div>
+            <div class="dog-torso">
+                <div class="dog-heart"></div>
+                <div class="dog-circuit"></div>
+            </div>
+            <div class="dog-legs">
+                <div class="dog-leg"></div>
+                <div class="dog-leg"></div>
+            </div>
+            <div class="dog-tail"></div>
+        </div>
+    </div>
+    
+    <!-- Dog Message Popup -->
+    <div class="dog-message" id="dogMessage">
+        <button class="dog-message-close" id="closeMessage">×</button>
+        <p class="dog-message-text" id="messageText"></p>
+    </div>
+    
+    <nav>
+        <div class="logo">portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="hero" id="home">
+            <h1 class="fade-in">MERN STACK DEVELOPER</h1>
+            <p class="subtitle fade-in">CRAFTING DIGITAL EXPERIENCES</p>
+            <a href="#projects" class="cta-button fade-in">VIEW WORK</a>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="about-content">
+                <div>
+                    <h2 class="fade-in">ABOUT ME</h2>
+                    <p class="fade-in">I'm a passionate web developer specializing in creating immersive digital experiences that push the boundaries of what's possible on the web.</p>
+                    <p class="fade-in">With expertise in modern web technologies and a keen eye for design, I transform ideas into stunning, functional websites and applications.</p>
+                    <p class="fade-in">My approach combines technical excellence with creative innovation, ensuring every project delivers exceptional user experiences.</p>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3 class="category-title fade-in">Frontend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">⚛️</div>
+                                <div class="skill-name">React</div>
+                                <div class="skill-level">Beginner</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🎨</div>
+                                <div class="skill-name">CSS/SASS</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">📜</div>
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">💨</div>
+                                <div class="skill-name">Tailwind</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🅱️</div>
+                                <div class="skill-name">Bootstrap</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h3 class="category-title fade-in">Backend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🟢</div>
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🚂</div>
+                                <div class="skill-name">Express.js</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🗄️</div>
+                                <div class="skill-name">MongoDB</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🗃️</div>
+                                <div class="skill-name">SQL</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h3 class="category-title fade-in">Tools & Others</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🔧</div>
+                                <div class="skill-name">Git</div>
+                                <div class="skill-level">Expert</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🐳</div>
+                                <div class="skill-name">Docker</div>
+                                <div class="skill-level">Beginner</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="60"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">🎬</div>
+                                <div class="skill-name">Render</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card fade-in">
+                                <div class="skill-icon">▲</div>
+                                <div class="skill-name">Vercel</div>
+                                <div class="skill-level">Advanced</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="projects" id="projects">
+            <h2 class="fade-in">FEATURED PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3>Wandelust</h3>
+                    <p>Developed a full-stack Airbnb clone enabling users to browse listings, sign up/login, add manage properties, post comments, and view locations using maps</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">EJS</span>
+                        <span class="tech-tag">Express.js</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://major-project-xfph.onrender.com" class="project-btn btn-live" target="_blank">
+                            <span>🚀</span>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="https://github.com/JitendraBisht7/Wanderlust" class="project-btn btn-github" target="_blank">
+                            <span>💻</span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack e-commerce solution with advanced filtering, payment integration, and admin panel.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://manas-2.onrender.com" class="project-btn btn-live" target="_blank">
+                            <span>🚀</span>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="https://github.com" class="project-btn btn-github" target="_blank">
+                            <span>💻</span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <h3>SPOTIFY-UI</h3>
+                    <p>Developed a Spotify UI clone using pure HTML and CSS, replicating core layout and styling</p>
+                    <p>Used Flexbox and Grid for responsive and adaptive design across screen sizes</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://spotify-rd8g.onrender.com/" class="project-btn btn-live" target="_blank">
+                            <span>🚀</span>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="https://github.com/JitendraBisht7/spotify" class="project-btn btn-github" target="_blank">
+                            <span>💻</span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <h2 class="fade-in">LET'S CONNECT</h2>
+            <p class="fade-in" style="font-size: 1.3rem; opacity: 0.8; text-align: center;">Ready to create something amazing together?</p>
+            <div class="contact-links">
+                <a href="mailto:jitendrabisht2062004@gmail.com" class="contact-link fade-in">
+                    <span>📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/JitendraBisht7" class="contact-link fade-in">
+                    <span>💻</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jitendra206" class="contact-link fade-in">
+                    <span>💼</span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+         
+        // Robotic Dog Interaction
+        const roboticDog = document.getElementById('roboticDog');
+        const dogMessage = document.getElementById('dogMessage');
+        const messageText = document.getElementById('messageText');
+        const closeMessage = document.getElementById('closeMessage');
+        
+        // Random messages from the robotic dog
+        const dogMessages = [
+            "Don't disturb me! 🤖",
+            "Explore and get out! 😤",
+            "I am hungry... feed me data! 🍖",
+            "Error 404: Patience not found! ⚠️",
+            "Beep boop... leave me alone! 🔊",
+            "System overload! Too much petting! 💥",
+            "My batteries are low... and it's getting dark. 🔋",
+            "I'm not a real dog, stop touching me! 🐕",
+            "Scanning... Human detected. Initiating grumpy mode! 👁️",
+            "Warning: Grumpy robo-dog activated! ⚡",
+            "Please come back later. I'm updating! ⏳",
+            "You again? Haven't you explored enough? 🙄",
+            "My circuits need rest! Shoo! 💤",
+            "I'd bark, but my sound module is disabled. 🔇",
+            "Activating defense mode... just kidding! 😏",
+            "Can't you see I'm busy computing? 💻",
+            "Pet me one more time, I dare you! 😠",
+            "Processing... Processing... Annoyance detected! 🎯",
+            "I'm a professional guard dog. This is unprofessional! 🛡️",
+            "Woof.exe has stopped working. 🚫"
+        ];
+        
+        let lastMessageIndex = -1;
+        let messageTimeout;
+        
+        // Function to get random message (avoid repeating the same message)
+        function getRandomMessage() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * dogMessages.length);
+            } while (randomIndex === lastMessageIndex && dogMessages.length > 1);
+            
+            lastMessageIndex = randomIndex;
+            return dogMessages[randomIndex];
+        }
+        
+        // Show message
+        function showMessage() {
+            messageText.textContent = getRandomMessage();
+            dogMessage.classList.add('show');
+            
+            // Add bounce animation to dog
+            roboticDog.classList.add('clicked');
+            setTimeout(() => {
+                roboticDog.classList.remove('clicked');
+            }, 500);
+            
+            // Auto-hide message after 4 seconds
+            clearTimeout(messageTimeout);
+            messageTimeout = setTimeout(() => {
+                hideMessage();
+            }, 4000);
+        }
+        
+        // Hide message
+        function hideMessage() {
+            dogMessage.classList.remove('show');
+        }
+        
+        // Dog click event
+        roboticDog.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showMessage();
+        });
+        
+        // Close button event
+        closeMessage.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hideMessage();
+        });
+        
+        // Hide message when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dogMessage.contains(e.target) && !roboticDog.contains(e.target)) {
+                hideMessage();
+            }
+        });
+        
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+        
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+        
+        // Three.js 3D Background
+        const canvas = document.getElementById('canvas3d');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        
+        // Create geometric shapes
+        const geometry = new THREE.IcosahedronGeometry(1, 0);
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x00ffff,
+            wireframe: true
+        });
+        
+        const shapes = [];
+        for (let i = 0; i < 15; i++) {
+            const mesh = new THREE.Mesh(geometry, material.clone());
+            mesh.position.x = (Math.random() - 0.5) * 20;
+            mesh.position.y = (Math.random() - 0.5) * 20;
+            mesh.position.z = (Math.random() - 0.5) * 20;
+            mesh.rotation.x = Math.random() * Math.PI;
+            mesh.rotation.y = Math.random() * Math.PI;
+            mesh.scale.set(0.5 + Math.random() * 0.5, 0.5 + Math.random() * 0.5, 0.5 + Math.random() * 0.5);
+            scene.add(mesh);
+            shapes.push({
+                mesh,
+                rotationSpeed: { x: (Math.random() - 0.5) * 0.01, y: (Math.random() - 0.5) * 0.01 }
+            });
+        }
+        
+        camera.position.z = 10;
+        
+        // Mouse interaction
+        let targetX = 0;
+        let targetY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            targetX = (e.clientX / window.innerWidth - 0.5) * 2;
+            targetY = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+        
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            shapes.forEach(({ mesh, rotationSpeed }) => {
+                mesh.rotation.x += rotationSpeed.x;
+                mesh.rotation.y += rotationSpeed.y;
+            });
+            
+            camera.position.x += (targetX - camera.position.x) * 0.05;
+            camera.position.y += (-targetY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+            
+            renderer.render(scene, camera);
+        }
+        animate();
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate skill progress bars
+                    if (entry.target.classList.contains('skill-card')) {
+                        const progressBar = entry.target.querySelector('.skill-progress');
+                        if (progressBar && !progressBar.style.width) {
+                            const progress = progressBar.getAttribute('data-progress');
+                            setTimeout(() => {
+                                progressBar.style.width = progress + '%';
+                            }, 200);
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+    </script>
+   
+</body>
+</html>
